@@ -25,7 +25,9 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `AccountHolder`
 --
+CREATE DATABASE GameShare;
 
+USE GameShare;
 CREATE TABLE IF NOT EXISTS `AccountHolder` (
   `AccountHolderID` int(11) NOT NULL,
   `HolderName` varchar(20) DEFAULT NULL,
@@ -50,7 +52,7 @@ INSERT INTO `AccountHolder` (`AccountHolderID`, `HolderName`, `HolderPhone`, `Ho
 --
 -- Table structure for table `Games`
 --
-
+USE GameShare;
 CREATE TABLE IF NOT EXISTS `Games` (
   `GamesID` int(11) NOT NULL,
   `GamesTypeID` int(11) DEFAULT NULL,
@@ -76,7 +78,7 @@ INSERT INTO `Games` (`GamesID`, `GamesTypeID`, `GamesName`, `GamesSize`, `GamesL
 --
 -- Table structure for table `GamesAccount`
 --
-
+USE GameShare;
 CREATE TABLE IF NOT EXISTS `GamesAccount` (
   `GamesAccountId` int(11) NOT NULL,
   `GamesID` int(11) DEFAULT NULL,
@@ -99,7 +101,7 @@ INSERT INTO `GamesAccount` (`GamesAccountId`, `GamesID`, `AccountHolderID`) VALU
 --
 -- Table structure for table `GamesType`
 --
-
+USE GameShare;
 CREATE TABLE IF NOT EXISTS `GamesType` (
   `GamesTypeID` int(11) NOT NULL,
   `GamesType` varchar(25) DEFAULT NULL
