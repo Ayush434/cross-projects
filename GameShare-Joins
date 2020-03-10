@@ -1,0 +1,21 @@
+SELECT GamesAccount.GamesAccountId, AccountHolder.HolderName, AccountHolder.HolderPhone 
+FROM GamesAccount
+INNER JOIN AccountHolder ON GamesAccount.AccountHolderID = AccountHolder.AccountHolderID 
+
+
+
+
+SELECT AccountHolder.HolderName, Games.GamesName, Games.GamesPrice
+FROM ((GamesAccount
+INNER JOIN AccountHolder ON GamesAccount.AccountHolderID = AccountHolder.AccountHolderID) 
+INNER JOIN Games ON GamesAccount.GamesID = Games.GamesID)  
+
+
+
+
+
+SELECT Games.GamesID, Games.GamesName, GamesType.GamesType, Games.GamesSize, Games.GamesLicense
+FROM Games
+INNER JOIN GamesType ON Games.GamesTypeID = GamesType.GamesTypeID 
+
+ 
